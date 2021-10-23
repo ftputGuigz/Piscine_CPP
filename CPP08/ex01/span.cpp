@@ -6,7 +6,7 @@
 /*   By: gpetit <gpetit@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 18:13:19 by gpetit            #+#    #+#             */
-/*   Updated: 2021/10/19 13:10:54 by gpetit           ###   ########.fr       */
+/*   Updated: 2021/10/23 22:07:14 by gpetit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void			Span::addNumber( int nb ){
 	else
 		_elem.push_back(nb);
 }
+
 
 unsigned int	Span::longestSpan( void ){
 	if (_elem.size() == 1)

@@ -6,7 +6,7 @@
 /*   By: gpetit <gpetit@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 18:10:25 by gpetit            #+#    #+#             */
-/*   Updated: 2021/10/19 12:28:11 by gpetit           ###   ########.fr       */
+/*   Updated: 2021/10/23 22:08:24 by gpetit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ class Span{
 		std::vector<int> const &	get_elem( void ) const;
 		void						addNumber( int nb );
 		
+		template < typename I >
+		void						addRange( I itstart, I itend );
+
 		unsigned int	longestSpan( void );
 		unsigned int	shortestSpan( void );
 
@@ -57,4 +60,16 @@ class Span{
 };
 
 std::ostream & operator<<(std::ostream & o, Span const & rhs);
+
+template < typename I>
+void			Span::addRange( I itstart, I itend )
+{
+	for (; itstart != itend; itstart++)
+	{
+		if (_elem.size() == _max)
+			throw FullVector();
+		else
+			_elem.push_back(*itstart);
+	}	
+}
 

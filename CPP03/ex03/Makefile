@@ -6,7 +6,7 @@
 #    By: gpetit <gpetit@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/26 23:02:24 by gpetit            #+#    #+#              #
-#    Updated: 2021/09/30 23:18:24 by gpetit           ###   ########.fr        #
+#    Updated: 2021/10/23 22:13:46 by gpetit           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%o:%cpp
+%.o:%.cpp
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(NAME)

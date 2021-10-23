@@ -6,7 +6,7 @@
 #    By: gpetit <gpetit@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/26 23:02:24 by gpetit            #+#    #+#              #
-#    Updated: 2021/09/26 23:06:05 by gpetit           ###   ########.fr        #
+#    Updated: 2021/10/23 22:13:21 by gpetit           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = main.cpp ClapTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%o:%cpp
+%.o:%.cpp
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(NAME)
